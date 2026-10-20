@@ -2,3 +2,4 @@ pyTelegramBotAPI
 curl_cffi
 beautifulsoup4
 python-dotenv
+tzdata

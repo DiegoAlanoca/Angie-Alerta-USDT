@@ -6,6 +6,9 @@
 from curl_cffi import requests
 from bs4 import BeautifulSoup
 
+# Rango razonable (BOB por USD). Si el BCB cambia su HTML y el scraping lee otro número, se descarta.
+TC_MIN, TC_MAX = 1.0, 100.0
+
 def obtener_tipo_cambio():
     url = "https://www.bcb.gob.bo/"
     headers = {
@@ -24,7 +27,10 @@ def obtener_tipo_cambio():
             if elemento:
                 # Extraemos el texto, quitamos espacios y cambiamos la coma por punto
                 texto = elemento.text.strip().replace(',', '.')
-                return float(texto)
+                valor = float(texto)
+                if TC_MIN <= valor <= TC_MAX:
+                    return valor
+                print(f"Error: valor del BCB fuera de rango ({texto!r}); se descarta.")
             else:
                 print("Error: No se encontró la etiqueta 'bcb-tco-num' en el HTML.")
         else:

@@ -38,10 +38,10 @@ Bot de Telegram **gratuito y de código abierto** que envía alertas del mercado
 
 ## Funciones
 
-- Promedio del Top N de anuncios P2P (BUY, USDT/BOB), configurable por usuario (1 a 15).
-- Alerta por variación (umbral de diferencia).
-- Alerta de precio mayor o igual / menor o igual a un límite (un solo disparo).
-- Alerta de USDT disponible bajo un mínimo.
+- Promedio del Top N de anuncios P2P (USDT/BOB) para **comprar** y para **vender** USDT, configurable (1 a 15).
+- Alerta por variación (umbral de diferencia) sobre la operación que elijas.
+- Alertas de precio mayor o igual / menor o igual a un límite (un solo disparo), para compra y venta a la vez.
+- Alertas de USDT disponible bajo un mínimo, también para compra y venta.
 - Consulta del tipo de cambio oficial del BCB.
 
 ## Requisitos
@@ -70,6 +70,7 @@ Edita `.env`:
 
 - `TELEGRAM_TOKEN`: token que te da @BotFather.
 - `ADMIN_CHAT_ID`: tu chat_id de Telegram.
+- `DONATION_URL` (opcional): enlace de donación, por ejemplo de Binance Pay. Si lo defines, el bot muestra un botón "Apoyar el proyecto".
 
 Ejecuta:
 
@@ -77,7 +78,16 @@ Ejecuta:
 python main.py
 ```
 
-En Telegram escribe `/menu` para configurar tus alertas.
+En Telegram escribe `/start` o toca el botón **Menú** (abajo a la izquierda del campo de texto). Comandos:
+
+| Comando | Función |
+|---|---|
+| `/start` | Bienvenida y panel principal |
+| `/menu` | Panel de configuración (alertas y ajustes) |
+| `/precio` | Promedio actual del USDT en Binance P2P |
+| `/bcb` | Tipo de cambio oficial del BCB |
+| `/ayuda` | Cómo funciona el bot |
+| `/acerca` | Acerca del proyecto y atribución |
 
 ## Estructura
 
@@ -86,8 +96,9 @@ En Telegram escribe `/menu` para configurar tus alertas.
 | `main.py` | Punto de entrada; hilos de alertas (60 s) y BCB (300 s) y polling de Telegram |
 | `binance_api.py` | Consulta de anuncios P2P de Binance |
 | `bcb_api.py` | Lectura del tipo de cambio del BCB |
-| `telegram_bot.py` | Menú y comandos del bot |
+| `telegram_bot.py` | Menús, comandos y botones del bot |
 | `database.py` | SQLite (`usuarios.db`) y caché en memoria |
+| `tiempo.py` | Fechas en hora de Bolivia |
 | `config.py` | Carga de variables desde `.env` |
 
 ## Aviso
@@ -102,4 +113,4 @@ Si ofreces una versión modificada del bot a otros usuarios por red, debes publi
 
 ## Contribuir y apoyar
 
-Se aceptan issues y pull requests. El proyecto se mantiene con donaciones voluntarias vía Binance Pay (próximamente en el bot).
+Se aceptan issues y pull requests. El proyecto se mantiene con donaciones voluntarias vía Binance Pay (el botón aparece en el bot al definir `DONATION_URL`).
