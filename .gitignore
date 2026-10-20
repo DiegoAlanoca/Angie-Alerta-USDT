@@ -1,0 +1,25 @@
+# Secretos (cualquier .env, excepto la plantilla)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Base de datos local (contiene chat_id de usuarios)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Logs
+*.log
+#claude
+CLAUDE.md

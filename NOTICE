@@ -1,0 +1,40 @@
+﻿Angie Alerta USDT
+Copyright (C) 2026 Diego Ronald Alanoca Avircata
+https://github.com/DiegoAlanoca/Angie-Alerta-USDT
+
+Este programa es software libre: puedes redistribuirlo y/o modificarlo bajo
+los términos de la GNU Affero General Public License publicada por la Free
+Software Foundation, versión 3 de la Licencia. Ver el archivo LICENSE.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, version 3 of the License. See the LICENSE file.
+
+-------------------------------------------------------------------------------
+TÉRMINO ADICIONAL — ATRIBUCIÓN (AGPL-3.0, sección 7(b))
+ADDITIONAL TERM — ATTRIBUTION (AGPL-3.0, section 7(b))
+-------------------------------------------------------------------------------
+
+Toda copia, versión modificada u obra derivada de este programa, incluida
+cualquier instancia del bot ofrecida a usuarios a través de una red, debe
+conservar de forma visible la siguiente atribución:
+
+    Basado en "Angie Alerta USDT" de Diego Ronald Alanoca Avircata
+    https://github.com/DiegoAlanoca/Angie-Alerta-USDT
+
+Esta atribución debe aparecer:
+  a) en el archivo README (o documentación equivalente) del proyecto derivado, y
+  b) en la interfaz que ven los usuarios del bot (por ejemplo, el mensaje de
+     /start, el menú principal o un comando de información "Acerca de").
+
+Every copy, modified version, or derivative work of this program, including
+any instance of the bot offered to users over a network, must visibly preserve
+the following attribution:
+
+    Based on "Angie Alerta USDT" by Diego Ronald Alanoca Avircata
+    https://github.com/DiegoAlanoca/Angie-Alerta-USDT
+
+This attribution must appear:
+  a) in the README file (or equivalent documentation) of the derived project, and
+  b) in the user-facing interface of the bot (for example, the /start message,
+     the main menu, or an "About" information command).
